@@ -24,6 +24,9 @@ $endfor$
 <body$if(coverpage)$ id="cover"$endif$$if(body-type)$ epub:type="$body-type$"$endif$>
 $if(titlepage)$
 <section epub:type="titlepage" class="titlepage">
+$for(author)$
+<p class="author">$author$</p>
+$endfor$
 $for(title)$
 $if(title.type)$
   <h1 class="$title.type$">$title.text$</h1>
@@ -32,11 +35,11 @@ $else$
 $endif$
 $endfor$
 $if(subtitle)$
-  <p class="subtitle">$subtitle$</p>
+<p class="subtitle">$subtitle$</p>
 $endif$
-$for(author)$
-  <p class="author">$author$</p>
-$endfor$
+$if(translation)$
+<p class="translation">$translation$</p>
+$endif$
 $for(creator)$
   <p class="$creator.role$">$creator.text$</p>
 $endfor$

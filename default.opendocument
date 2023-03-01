@@ -11,15 +11,18 @@ $for(header-includes)$
 $endfor$
 <office:body>
 <office:text>
+$for(author)$
+<text:p text:style-name="Author">$author$</text:p>
+$endfor$
 $if(title)$
 <text:p text:style-name="Title">$title$</text:p>
 $endif$
 $if(subtitle)$
 <text:p text:style-name="Subtitle">$subtitle$</text:p>
 $endif$
-$for(author)$
-<text:p text:style-name="Author">$author$</text:p>
-$endfor$
+$if(translation)$
+<text:p text:style-name="Translation">$translation$</text:p>
+$endif$
 $if(date)$
 <text:p text:style-name="Date">$date$</text:p>
 $endif$
